@@ -1,0 +1,638 @@
+/* General Reset and Basic Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6fa; /* Updated background color */
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #ff5722, #00b894); /* Integrated gradient with your old colors */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -2px;
+}
+
+/* Left Side: Company Name */
+.nav-left h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    font-family: 'Manrope', sans-serif; /* Optional: Use a bold font for the company name */
+    color: #fff; /* Text color matches the header */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-left h1:hover {
+    transform: scale(1.1); /* Slight scaling on hover */
+} 
+
+.nav-left {
+  display: flex; /* Enables flexbox for horizontal alignment */
+  align-items: center; /* Vertically centers the logo and text */
+  gap: 10px; /* Adds spacing between the logo and the text */
+}
+
+.nav-logo {
+  width: 100px; /* Increased size */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 5px;  
+} 
+
+.nav-logo {
+  width: 40px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Right Side: Navigation Links */
+.nav-right ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-right ul li {
+    margin: 0 15px; /* Increased spacing between links */
+}
+
+.nav-right ul li a {
+    color: #fff; /* Link color matches the header */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500; /* Added boldness for better visibility */
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-right ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff; /* Underline color matches the link */
+    transition: width 0.3s ease;
+}
+
+.nav-right ul li a:hover {
+    color: #e0f7fa; /* Lighter shade of white on hover */
+    transform: scale(1.1); /* Slight scaling on hover */
+}
+
+.nav-right ul li a:hover::after {
+    width: 100%; /* Full underline on hover */
+}
+
+
+  
+
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    z-index: -1;
+  }
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, rgba(255, 87, 34, 0.7), rgba(0, 184, 148, 0.7)); /* Gradient overlay for better text readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 600px;
+    z-index: 1;
+    position: relative;
+}
+
+.hero-title {
+    font-size: 3rem; /* Larger font size for prominence */
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 800; /* Bold weight for emphasis */
+}
+
+.hero-subtitle {
+    font-size: 1.5rem; /* Slightly smaller than title but still prominent */
+    margin-bottom: 2rem;
+    line-height: 1.4;
+    font-weight: 500; /* Medium weight for balance */
+}
+
+/* Hero Actions (Buttons) */
+.hero-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.primary-cta {
+    padding: 1rem 2rem;
+    background: #00b894; /* Primary green-teal color */
+    color: white;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.secondary-cta {
+    padding: 1rem 2rem;
+    background: transparent; /* Transparent background for contrast */
+    border: 2px solid white; /* White border for visibility */
+    color: white;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-cta:hover {
+    background: #ff5722; /* Secondary orange-red color on hover */
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-cta:hover {
+    background: rgba(255, 255, 255, 0.1); /* Subtle background fill on hover */
+    border-color: #00b894; /* Change border color to primary green-teal */
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Background Image */
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7); /* Dim the image slightly for better text contrast */
+    z-index: -1; /* Place behind content */
+}
+
+/* Parallax Effect for Hero Background */
+.window-parallax {
+    transform: translate3d(0, 20%, 0); /* Initial position offset */
+    transition: transform 0.5s ease-out; /* Smooth transition */
+}
+
+.window-parallax.in-view {
+    transform: translate3d(0, 0, 0); /* Move back to original position when in view */
+}
+  /* About Section */
+  .about-section {
+    padding: 5rem 0;
+    background: #ffffff;
+  }
+
+  .solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .solution-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  .solution-card i {
+    font-size: 3rem;
+    color: #00b894;
+    margin-bottom: 1rem;
+  }
+
+  /* Progress Section */
+  .progress-section {
+    padding: 5rem 0;
+    background: #00b894;
+    color: white;
+  }
+
+  .progress-timeline {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding: 2rem;
+    background: white;
+    color: #222;
+    border-radius: 15px;
+    flex: 1;
+  }
+
+  .timeline-item.active {
+    background: #ff5722;
+    color: white;
+  }
+
+  /* Impact Section */
+  .impact-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #00b894 0%, #ffffff 50%, #ff5722 100%);
+    position: relative;
+  }
+
+  .impact-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    z-index: -1;
+  }
+
+  .impact-stat {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    color: #ff5722;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    padding: 5rem 0;
+    background: #222;
+    color: white;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .form-select {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 2px solid #00b894;
+    margin-top: 1rem;
+  }
+
+  .testimonial {
+    font-style: italic;
+    color: #e6e6e6;
+  }
+
+  /* Footer */
+  .site-footer {
+    background: #222;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-bottom: 2rem;
+  }
+
+  .social-icons a {
+    color: #e6e6e6;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-nav {
+      display: none;
+    }
+    .mobile-menu {
+      display: block;
+    }
+    .solution-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Hover Effects */
+  .nav-link:hover {
+    background: rgba(255,255,255,0.1);
+  }
+
+  .solution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  }
+
+  .contact-submit:hover {
+    background: #e64a19;
+  }
+
+  /* Tesla-inspired Parallax */
+  .hero-bg {
+    background-attachment: fixed;
+    transform: translateY(-5%);
+  }
+
+  /* Microsoft-inspired Hover */
+  .nav-link:hover {
+    color: #ff5722;
+  }
+
+  /* Toyota-inspired Timeline */
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Google-inspired Form */
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    padding: 1rem;
+    border: 2px solid #00b894;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+
+  /* Error Fixes */
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Additional Features */
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+  }
+
+  /* Referral Program Inspired by Tesla [[1]] */
+  .referral-banner {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00b894;
+    padding: 1rem 2rem;
+    color: white;
+    border-radius: 15px;
+    z-index: 1000;
+  }
+
+  .gallery-section {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .gallery-section .section-title {
+    font-size: 2.5rem;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .gallery-section .section-description {
+    font-size: 1rem;
+    color: #555;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 40px;
+  }
+  
+  .gallery-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    margin-bottom: 40px;
+  }
+  
+  .gallery-card {
+    width: 22%;
+    background-color: #f7f7f7;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .gallery-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+  }
+  
+  .gallery-info {
+    padding: 16px;
+    text-align: left;
+  }
+  
+  .gallery-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    font-family: 'Manrope', sans-serif;
+  }
+  
+  .gallery-info p {
+    font-size: 0.9rem;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+  }
+
+
+
+
+ /* Contact Section Styling */
+.contact-section {
+  padding: 6rem 0;
+  background: #f9fafb; /* Neutral background for professionalism */
+  color: #333; /* Dark text for readability */
+  text-align: center;
+}
+
+.contact-header {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #1e293b; /* Slightly darker text for emphasis */
+}
+
+.section-description {
+  font-size: 1.2rem;
+  color: #475569; /* Subtle gray for secondary text */
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  width: 600px; /* Expanded width */
+  margin: 0 auto;
+  background: white; /* Clean white background for the form */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Soft shadow for depth */
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #334155; /* Dark gray for labels */
+  transition: color 0.3s ease;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #cbd5e1; /* Light border for inputs */
+  border-radius: 8px;
+  background: #ffffff; /* White background for inputs */
+  color: #1e293b; /* Dark text for inputs */
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #00b894; /* Highlight border color on focus */
+  box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.2); /* Subtle glow effect */
+}
+
+button.primary-cta {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem;
+  background: #00b894; /* Brand color for the button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button.primary-cta:hover {
+  background: #00a8c5; /* Slightly darker shade for hover */
+  transform: scale(1.02); /* Slight scaling effect */
+}
+
+.error-message {
+  display: block;
+  color: #ef4444; /* Red for error messages */
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  opacity: 0;
+  animation: fadeInError 0.5s ease forwards;
+}
+
+@keyframes fadeInError {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    max-width: 100%; /* Full width on smaller screens */
+    padding: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-description {
+    font-size: 1rem;
+  }
+} 
